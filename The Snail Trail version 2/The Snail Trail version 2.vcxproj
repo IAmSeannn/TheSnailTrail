@@ -89,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hr_time.cpp" />
-    <ClCompile Include="The Snail Trail version 0-0 - for 2016.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SnailTrailMoves.csv" />

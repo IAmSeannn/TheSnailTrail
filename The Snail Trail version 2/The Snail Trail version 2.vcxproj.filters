@@ -32,7 +32,7 @@
     <ClCompile Include="hr_time.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="The Snail Trail version 0-0 - for 2016.cpp">
+    <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
