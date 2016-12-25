@@ -9,7 +9,7 @@
 // Other changes in this version:
 // - Replaced bleeps with text to keep the noise levels down.
 
-bool record_Every_Step(1);	//NEW decide whether to record details of each step played. true/1 = keep details, false/0 = summary only
+bool record_Every_Step(0);	//NEW decide whether to record details of each step played. true/1 = keep details, false/0 = summary only
 
 // A.Oram 2016, originally based on the P.Vacher's skeletal program.
 // Comments showing 'NEW' are on lines additional to the original Snail Trail version 0.

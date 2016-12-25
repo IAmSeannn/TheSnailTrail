@@ -92,6 +92,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\Desktop\SnailTrailMoves_FOR_DEMO_USE_999_SEED.csv" />
     <None Include="SnailTrailMoves.csv" />
     <None Include="SnailTrailTimes.csv" />
   </ItemGroup>
