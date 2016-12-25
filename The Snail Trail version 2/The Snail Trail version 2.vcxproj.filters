@@ -43,8 +43,5 @@
     <None Include="SnailTrailTimes.csv">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="..\..\..\..\Desktop\SnailTrailMoves_FOR_DEMO_USE_999_SEED.csv">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
