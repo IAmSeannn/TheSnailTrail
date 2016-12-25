@@ -10,6 +10,7 @@
 // - Replaced bleeps with text to keep the noise levels down.
 
 bool record_Every_Step(0);	//NEW decide whether to record details of each step played. true/1 = keep details, false/0 = summary only
+bool automatedGameplay(1); //1 for automated, 0 for non
 
 // A.Oram 2016, originally based on the P.Vacher's skeletal program.
 // Comments showing 'NEW' are on lines additional to the original Snail Trail version 0.
@@ -155,6 +156,9 @@ double FrameTimeTotal(0.); //NEW
 double PaintTimeTotal(0.); //NEW
 int GamesPlayed(0);     //NEW
 int TotalMovesMade(0);	//NEW
+
+//custom added vars
+char dataToPaint[((SIZEX + 1)*SIZEY) + 1];
 
 
 // Start of the 'SNAIL TRAIL' listing
@@ -404,15 +408,19 @@ void paintGarden(char garden[][SIZEX])
 	SelectBackColour(clGreen);
 	SelectTextColour(clDarkBlue);
 	Gotoxy(0, 2);
+	int count = 0;
 
 	for (int row(0); row < SIZEY; ++row)
 	{
 		for (int col(0); col < SIZEX; ++col)
 		{
-			cout << garden[row][col];			// display current garden contents 
+			dataToPaint[count++] = garden[row][col];			// display current garden contents 
 		}
-		cout << endl;
+		dataToPaint[count++] = '\n';
 	}
+	dataToPaint[count++] = 0;
+
+	puts(dataToPaint);
 } //end of paintGarden
 
 
@@ -690,13 +698,18 @@ int getKeyPress()				//NEW2 now altered to read from file
 	int command;
 	char dumpComma;				//NEW2
 
-	ST_PlayList >> command;		//NEW2 Get command from prerecorded list
-	ST_PlayList >> dumpComma;	//NEW2 remember to read and dump comma separator
-
-	////read in the selected option
-	//command = _getch();  		// to read arrow keys
-	//while (command == 224)	// to clear extra info from buffer
-	//	command = _getch();
+	if (automatedGameplay)
+	{
+		ST_PlayList >> command;		//NEW2 Get command from prerecorded list
+		ST_PlayList >> dumpComma;	//NEW2 remember to read and dump comma separator
+	}
+	else
+	{
+		////read in the selected option
+		command = _getch();  		// to read arrow keys
+		while (command == 224)	// to clear extra info from buffer
+			command = _getch();
+	}
 
 	//ST_Moves << command << ','; // NEW save commands as they're entered, as CSV file.
 	return(command);

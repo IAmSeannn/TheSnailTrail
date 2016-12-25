@@ -37,3 +37,37 @@ Average Paint time=	40.6133ms
 Average Init time=	19.8327us
 
 *************************************************************************************************************************
+
+SUMMARY for 30 games played, with 1081 moves entered.
+
+Average frames/sec=	67266.1
+Average Paint time=	30.1952ms
+Average Init time=	16.9805us
+
+*************************************************************************************************************************
+
+SUMMARY for 30 games played, with 1081 moves entered.
+
+Average frames/sec=	65961.7
+Average Paint time=	30.7068ms
+Average Init time=	16.0993us
+
+*************************************************************************************************************************
+
+//after removing cout from paintgarden
+
+SUMMARY for 30 games played, with 1081 moves entered.
+
+Average frames/sec=	39124.7
+Average Paint time=	18.3208ms
+Average Init time=	18.961us
+
+*************************************************************************************************************************
+
+SUMMARY for 30 games played, with 1081 moves entered.
+
+Average frames/sec=	43175.6
+Average Paint time=	16.7919ms
+Average Init time=	20.0033us
+
+*************************************************************************************************************************
