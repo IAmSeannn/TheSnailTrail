@@ -755,9 +755,20 @@ void showOptions(int column, int row)
 	SelectBackColour(clRed);
 	SelectTextColour(clYellow);
 	Gotoxy(column, row);
-	cout << "TO MOVE USE ARROW KEYS - EAT ALL LETTUCES (" << LETTUCE << ')';
+
+	//first section
+	dataToPaint[0] = '\0';
+	strcat(dataToPaint, "TO MOVE USE ARROW KEYS - EAT ALL LETTUCES (");
+	strcat(dataToPaint, &LETTUCE);
+	strcat(dataToPaint, ")");
+	puts(dataToPaint);
+
+	//second section
 	Gotoxy(column, row + 1);
-	cout << "TO QUIT USE 'Q'";
+	dataToPaint[0] = '\0';
+	strcat(dataToPaint, "TO QUIT USE 'Q'");
+	puts(dataToPaint);
+
 } //end of showOptions
 
 void showPelletCount(int pellets, int column, int row)
